@@ -37,7 +37,7 @@ class DLL {
                     curr = curr->next; 
                     return *this;
                 }
-                Iter& operator++(int) { 
+                Iter operator++(int) { 
                     Iter tmp{curr}; 
                     curr = curr->next;   
                     return tmp;
@@ -46,7 +46,7 @@ class DLL {
                     curr = curr->prev; 
                     return *this;
                 }
-                Iter& operator--(int) { 
+                Iter operator--(int) { 
                     Iter tmp{curr}; 
                     curr = curr->prev;   
                     return tmp;
@@ -70,7 +70,7 @@ class DLL {
                     curr = curr->next; 
                     return *this;
                 }
-                const_Iter& operator++(int) { 
+                const_Iter operator++(int) { 
                     const_Iter tmp{curr}; 
                     curr = curr->next;   
                     return tmp;
@@ -79,7 +79,7 @@ class DLL {
                     curr = curr->prev; 
                     return *this;
                 }
-                const_Iter& operator--(int) { 
+                const_Iter operator--(int) { 
                     const_Iter tmp{curr}; 
                     curr = curr->prev;   
                     return tmp;
@@ -103,7 +103,7 @@ class DLL {
                     --curr_iter;
                     return *this;
                 }
-                reverse_Iter& operator++(int) { 
+                reverse_Iter operator++(int) { 
                     reverse_Iter tmp{curr_iter}; 
                     --curr_iter;   
                     return tmp;
@@ -112,7 +112,7 @@ class DLL {
                     ++curr_iter;
                     return *this;
                 }
-                reverse_Iter& operator--(int) { 
+                reverse_Iter operator--(int) { 
                     reverse_Iter tmp{curr_iter}; 
                     ++curr_iter;   
                     return tmp;
@@ -144,7 +144,7 @@ class DLL {
                     --curr_iter;
                     return *this;
                 }
-                const_reverse_Iter& operator++(int) { 
+                const_reverse_Iter operator++(int) { 
                     const_reverse_Iter tmp{curr_iter}; 
                     --curr_iter;   
                     return tmp;
@@ -153,7 +153,7 @@ class DLL {
                     ++curr_iter;
                     return *this;
                 }
-                const_reverse_Iter& operator--(int) { 
+                const_reverse_Iter operator--(int) { 
                     const_reverse_Iter tmp{curr_iter}; 
                     ++curr_iter;   
                     return tmp;
