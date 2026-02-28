@@ -702,7 +702,10 @@ bool operator<(const DLL<T>& l,const DLL<T>& r) {
 template <typename T>
 void DLL<T>::merge(DLL& other) {
     if (this == &other) return;
-    if (empty()) swap(other);
+    if (empty()) { 
+        swap(other);
+        return;
+    }
 
     size += other.size;
     auto* tmp1 = sentinel->next;
