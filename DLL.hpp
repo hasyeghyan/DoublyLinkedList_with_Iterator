@@ -377,7 +377,7 @@ template <typename T>
 typename DLL<T>::Iter  DLL<T>::insert(Iter pos, size_t count, const T& value ) {
     int i{};
     auto ans = pos;
-    for (size_t i{}; i < count; ++i) {
+    for (size_t j{}; j < count; ++j) {
         auto ret = insert(pos,value);
         if (i++ == 0) ans = ret;
     }
